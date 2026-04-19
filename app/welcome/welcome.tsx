@@ -5,7 +5,7 @@ import{
   Navbar, Container, Nav, NavDropdown
 } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
-import icon from "app/assets/icon.jpg";
+import profile_icon from "..\\app\\assets\\icon.jpg";
 
 export function Welcome({ message }: { message: string }) {
 	return (
@@ -113,7 +113,7 @@ function introductionEN(){
     <div id="introduction" className="introduction">
       <h1>Hello, I'm Pumpaa, a 100% I-person(?)
       </h1>
-	  <img className="profile_icon" src='..\app\assets\icon.jpg' alt="profile" width="200" height="200"/>
+	  <img className="profile_icon" src={profile_icon} alt="profile" width="200" height="200"/>
       <p>I'm from Hong Kong and a native speaker of Cantonese.<br/>
       I can understand English, Mandarin and a little bit of Japanese. Currently studying Italian on Duolingo<br/>
       Following are some of my favorite things that you may be interested in:
@@ -147,7 +147,8 @@ function introductionEN(){
         <p>I'm open to any fandom, but I'm not good at chatting, a bit negative and you may find me a bit weird(?).<br/>
         Despite that, I'm still looking forward to communicating with friends who share the same interests.<br/>
         Nice to meet you!</p>
-		<h2>By the way, I hate it when people say my oshi is bad without logic or evidence^^</h2>
+		<h2>By the way, I hate it when people say my oshi is bad without logic or evidence^^<br/>
+    Not only my oshi, also others^^</h2>
     </div>
   );
 }
@@ -156,7 +157,7 @@ function introductionZH(){
   return (
     <div id="introduction" className="introduction">
       <h1>你好，我是純種I人(?)Pumpaa！</h1>
-      <img className="profile_icon" src='..\app\assets\icon.jpg' alt="profile" width="200" height="200"/>
+      <img className="profile_icon" src={profile_icon} alt="profile" width="200" height="200"/>
       <p>我是香港人，主使用講廣東話。<br/>
       另外我能理解英語、國語和一點點日語。目前在使用情勒鳥學習意大利文<br/>
       以下是一些我有坑的團體、角色和作品：
@@ -190,7 +191,8 @@ function introductionZH(){
         <p>我不拒同擔，但不太會聊天，人有點負面，然後你可能會覺得我人有點奇怪(?)<br/>
         雖然如此，還是很期待能和同坑的朋友交流。<br/>
         還請多多指教！</p>
-		<h2>對了，我最討厭別人沒有邏輯或證據地說我的推不好^^</h2>
+		<h2>對了，我最討厭別人沒有邏輯或證據地說我的推不好^^<br/>
+    盲黑別人推我也很討厭^^</h2>
     </div>
   );
 }   
