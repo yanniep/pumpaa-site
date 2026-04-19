@@ -5,7 +5,7 @@ import{
   Navbar, Container, Nav, NavDropdown
 } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
-import profile_icon from "./app/assets/icon.jpg";
+import profile_icon from "../app/assets/icon.jpg";
 
 export function Welcome({ message }: { message: string }) {
 	return (
