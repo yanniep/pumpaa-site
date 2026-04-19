@@ -83,7 +83,7 @@ function navbar(){
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home">Hello World</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -97,12 +97,13 @@ function navbar(){
               <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
             </NavDropdown>
           </Nav>
+
+          <Navbar.Text onClick={changeLanguage} style={{ cursor: "pointer" }}  >
+            {
+              language === "ZH" ? "中文" : "English"
+            }
+          </Navbar.Text>
         </Navbar.Collapse>
-        <Navbar.Text onClick={changeLanguage} style={{cursor: "pointer"}}  >
-          {
-            language === "ZH" ? "中文" : "English"
-          }
-        </Navbar.Text>
       </Container>
     </Navbar>
   );
