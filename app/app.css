@@ -49,6 +49,10 @@ body {
     }
 }
 
+.introduction h2 {
+  color: rebeccapurple;
+
+}
 .introduction > :not(.profile_icon, p) {
   animation: topToBottom 0.8s ease-out; 
 }
