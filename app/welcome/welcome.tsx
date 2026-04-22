@@ -14,14 +14,16 @@ export function Welcome({ message }: { message: string }) {
       {
         lang === "ZH" ? introductionZH() : introductionEN()
       }
-      <section id="center">
+      {
+        /*<section id="center">
         <div className="star">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200" width="200" height="200">
           <polygon points="0,-100 29.39,-40.45 95.11,-30.9 47.55,15.45 58.78,80.90 0,50 -58.78,80.9 -47.55,15.45 -95.11,-30.9 -29.39,-40.45" />
         </svg>
         </div>
         
-      </section>
+      </section>*/
+      }
 	  </>
 	);
 }
@@ -88,19 +90,34 @@ function navbar(){
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+            <NavDropdown title="HOLOSTARS" id="basic-nav-dropdown">
+              <NavDropdown.Item href="https://www.youtube.com/@HanasakiMiyabi" target="_blank">
+                {
+                  lang === "ZH" ? "花咲みやび" : "Hanasaki Miyabi"
+                }
+            </NavDropdown.Item>
+              <NavDropdown.Item href="#gamma">
+                {
+                  lang === "ZH" ? "緋崎ガンマ" : "Hizaki Gamma"
+                }
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#flayon">Machina X Flayon</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+              <NavDropdown.Item href="https://holostars.hololivepro.com/en/talent" target="_blank">
+                {lang === "ZH" ? "其他成員" : "Other members"}
+              </NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown title={lang === "ZH" ? "新世界狂歡" : "NU:Carnival"} id="basic-nav-dropdown">
+              <NavDropdown.Item href="https://youtube.com/playlist?list=PLKtwQBJIuC0huBT9mbXN24wMYl1AD9tMt&si=q4o6FNpL8A1MMZsN0." target="_blank">{
+                lang === "ZH" ? "攻略" : "Strategy"
+              }
+            </NavDropdown.Item>
             </NavDropdown>
           </Nav>
 
           <Navbar.Text onClick={changeLanguage} style={{ cursor: "pointer" }}  >
             {
-              language === "ZH" ? "中文" : "English"
+              lang === "ZH" ? "中文" : "English"
             }
           </Navbar.Text>
         </Navbar.Collapse>
@@ -172,7 +189,7 @@ function introductionZH(){
               <li>所有Holostars成員</li>  
             </ul>
           </li>
-          <li>NU:Carnival
+          <li>新世界狂歡
             <ul className="canival_list">
               <li>玖夜</li>
               <li>歛</li>
