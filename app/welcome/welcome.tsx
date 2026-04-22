@@ -90,6 +90,11 @@ function navbar(){
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="https://pumpaa.theblog.me/" target="_blank">
+              {
+                lang === "ZH" ? "部落格" : "Blog"
+              }
+            </Nav.Link>
             <NavDropdown title="HOLOSTARS" id="basic-nav-dropdown">
               <NavDropdown.Item href="https://www.youtube.com/@HanasakiMiyabi" target="_blank">
                 {
@@ -101,7 +106,7 @@ function navbar(){
                   lang === "ZH" ? "緋崎ガンマ" : "Hizaki Gamma"
                 }
               </NavDropdown.Item>
-              <NavDropdown.Item href="#flayon">Machina X Flayon</NavDropdown.Item>
+              <NavDropdown.Item href="https://www.youtube.com/@MachinaXFlayon" target='_blank'>Machina X Flayon</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="https://holostars.hololivepro.com/en/talent" target="_blank">
                 {lang === "ZH" ? "其他成員" : "Other members"}
